@@ -3,10 +3,12 @@ const path = require('path');
 
 let csv2jsonObj = new csv2json();
 
-csv2jsonObj.fromFile(path.join('customer-data.csv')).then((json)=>{
-    console.log(JSON.parse(json));
+csv2jsonObj.fromFile(path.join('./some/folder/to/file/customer-data.csv')).then((fileName)=>{
+    console.log(fileName);
 }).catch((err)=>{
     console.log(err);
 });
+
+
 
 
